@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cx_oracle_helper"
+version = "0.0.1"
+license = {file = "LICENSE.txt"}
+authors = [
+  { name="Stevens Brito", email="author@example.com" },
+]
+description = "Package to perform simple operations over Oracle DB with cx_Oracle"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "cx_Oracle"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ['Oracle', 'Database', 'Python', 'SQL', 'PLSQL']
+
+[project.scripts]
+cx_oracle_helper-cli = "cx_oracle_helper.src:cli"
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+
+[tool.setuptools.packages.find]
+include = ["cx_oracle_helper", "cx_oracle_helper.*"]
+exclude = ["cx_oracle_helper.db"]
+namespaces = false
